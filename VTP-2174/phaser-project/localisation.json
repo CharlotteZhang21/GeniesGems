@@ -1,0 +1,26 @@
+{
+    "EN": [
+        { "lang_code": "en" },
+        { "download": "DOWNLOAD" },
+        { "victory": "Victory" },
+        { "casualties": "Casualties" },
+        { "you_lose": "You lose" },
+        { "reinforcements": "REINFORCEMENTS" },
+        { "your_army": "Your army" },
+        { "demon_slayer": "Demon Slayer" },
+        { "info_1": "You are losing the battle!" },
+        { "info_2": "Quickly send for reinforcements before it is too late " }
+    ],
+    "ZH": [
+        { "lang_code": "zh" },
+        { "download": "免费下载" },
+        { "victory": "胜利" },
+        { "casualties": "伤亡" },
+        { "you_lose": "失败" },
+        { "reinforcements": "增援" },
+        { "your_army": "我军" },
+        { "demon_slayer": "狩魔猎人" },
+        { "info_1": "我军正处于劣势" },
+        { "info_2": "请求支援" }
+    ]
+}

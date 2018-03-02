@@ -1,0 +1,248 @@
+    html {
+        height: 100%;
+    }
+
+    body {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-width: 100% auto;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-image: url(../assets/bg.jpg);
+    }
+
+    canvas {
+        display: block;
+        cursor: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    #wrap {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        left: 0;
+        top: 0;
+    }
+
+    .preload-font {
+        position: absolute;
+        bottom: -1000%;
+    }
+
+    .layout {
+        position: absolute;
+        -webkit-transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        pointer-events: none;
+    }
+
+    #tooltip {
+        width: 100%;
+        height: 20%;
+        top: 32%;
+    }
+
+    #tooltip-text {
+        width: 50%;
+        height: 40%;
+        top: 63%;
+        left: 65%;
+    }
+
+    #board {
+        width: 100vw;
+        height: 100vw;
+    }
+
+    #board-inner {
+        width: 95%;
+        height: 95%;
+        margin: 2.5%;
+    }
+
+    #board-mask {
+        width: 95vw;
+        height: 95vw;
+        top: 49.8%;
+    }
+
+    #logo {
+        width: 80%;
+        height: 0;
+        padding-bottom: 25%;
+        top: 15%
+    }
+
+    #cta-start {
+        width: 60%;
+        height: 0;
+        padding-bottom: 25%;
+        top: 85%;
+    }
+
+    #cta-end {
+        width: 55%;
+        height: 0;
+        padding-bottom: 20%;
+        top: 85%;
+        left: 65%;
+    }
+
+    #goal-panel {
+        width: 80%;
+        height: 0;
+        padding-bottom: 20%;
+        top: 12%;
+    }
+
+    #goal-item-1 {
+        width: 13%;
+        height: 0;
+        padding-bottom: 13%;
+        top: 50%;
+        left: 50%;
+    }
+
+    #goal-item-2 {
+        width: 13%;
+        height: 0;
+        padding-bottom: 13%;
+        top: 50%;
+        left: 25%;
+    }
+
+    #goal-item-3 {
+        width: 13%;
+        height: 0;
+        padding-bottom: 13%;
+        top: 50%;
+        left: 75%;
+    }
+
+    #goal-text-1 {
+        width: 8%;
+        height: 0;
+        padding-bottom: 8%;
+        top: 66%;
+        left: 55%;
+    }
+
+    #goal-text-2 {
+        width: 8%;
+        height: 0;
+        padding-bottom: 8%;
+        top: 66%;
+        left: 30%;
+    }
+
+    #goal-text-3 {
+        width: 8%;
+        height: 0;
+        padding-bottom: 8%;
+        top: 66%;
+        left: 80%;
+    }
+
+    #ostin {
+        width: 40%;
+        height: 0;
+        padding-bottom: 60%;
+        left: 25%;
+        top: 120%;
+    }
+
+    .cascade {
+        width: 40%;
+        height: 0;
+        padding-bottom: 130%;
+        top: 35%;
+    }
+
+    #cascade-1 {
+        left: 10%;
+    }
+
+    #cascade-2 {
+        left: 35%;
+    }
+
+    #cascade-3 {
+        left: 60%;
+    }
+
+    #cascade-4 {
+        left: 85%;
+    }
+    /*************************** LANDSCAPE ***************************/
+
+    @media all and (orientation:landscape) {
+
+        #tooltip {
+            width: 50%;
+            left: 27.5%;
+            height: 30%;
+            top: 25%;
+        }
+
+        #board {
+            height: 55vw;
+            width: 55vw;
+            left: 27.5%;
+        }
+
+        #board-mask {
+            height: 55vw;
+            width: 55vw;
+            left: 27.5%;
+        }
+
+        #logo {
+            width: 40%;
+            padding-bottom: 12.5%;
+            top: 35%;
+            left: 77.5%;
+        }
+
+        #cta-start {
+            width: 30%;
+            left: 77.5%;
+            top: 65%;
+        }
+
+        #cta-end {
+            width: 30%;
+            left: 77.5%;
+            top: 65%;
+        }
+
+        #goal-panel {
+            width: 40%;
+            padding-bottom: 20%;
+            top: 35%;
+            left: 77.5%;
+        }
+
+        #ostin {
+            width: 25%;
+            top: 140%;
+            left: 15%;
+        }
+
+        .cascade {
+            width: 25%;
+            padding-bottom: 100%;
+            top: 50%;
+        }
+    }

@@ -1,0 +1,1 @@
+to allow commit of an directory empty into git

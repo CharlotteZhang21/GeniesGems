@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+    <title>Vungle Endcard</title>
+    <!-- build:css main.css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- /build -->
+    <style>
+    @font-face {
+        font-family: "vungle-fonticon";
+        src: url("vungle-fonticon.eot");
+        src: url("vungle-fonticon.eot?#iefix") format("embedded-opentype"), url("vungle-fonticon.woff") format("woff"), url("vungle-fonticon.ttf") format("truetype"), url("vungle-fonticon.svg#vungle-fonticon") format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'mainfont';
+        src: url('font.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+
+<body class="preload">
+    <div id="wrap">
+        <div id="vungle-header" class="portrait-light landscape-light">
+            <a id="vungle-close" class="hide" data-icon="i" onclick="doSomething('close')"></a>
+        </div>
+        <div id="game"></div>
+        <!-- layout -->
+        <div id="logo" class="layout"></div>
+        <div id="board" class="layout">
+            <div id="board-inner"></div>
+        </div>
+        <div id="board-mask" class="layout"></div>
+        <div id="tooltip" class="layout">
+            <div id="tooltip-text" class="layout"></div>
+        </div>
+        <div id="cta-start" class="layout"></div>
+        <div id="cta-end" class="layout"></div>
+        <div id="goal-panel" class="layout">
+            <div id="goal-item-1" class="layout"></div>
+            <div id="goal-text-1" class="layout"></div>
+            <div id="goal-item-2" class="layout"></div>
+            <div id="goal-text-2" class="layout"></div>
+            <div id="goal-item-3" class="layout"></div>
+            <div id="goal-text-3" class="layout"></div>
+        </div>
+        <!-- custom animations start -->
+        <div id="ostin" class="layout"></div>
+        <div id="cascade-1" class="layout cascade"></div>
+        <div id="cascade-2" class="layout cascade"></div>
+        <div id="cascade-3" class="layout cascade"></div>
+        <div id="cascade-4" class="layout cascade"></div>
+        <!-- custom animations end -->
+        <div id="vungle-footer" class="portrait-light landscape-light portrait-center landscape-right">
+            <span class="footer" data-icon="q"></span>
+        </div>
+    </div>
+    <!-- phaser requires fonts to be preloaded before they can be used "in game" -->
+    <!-- note: you can add more fonts below -->
+    <div class="preload-font" style="font-family: mainfont;">.</div>
+    <!-- build:remove -->
+    <script src="http://localhost:35729/livereload.js"></script>
+    <!-- /build -->
+    <!-- build:js phaser.min.js -->
+    <script src="node_modules/phaser/build/custom/phaser-no-physics.js"></script>
+    <!-- /build -->
+    <script>
+    PiecSettings = {};
+
+    PiecSettings.assetsDir = '';
+    </script>
+    <!-- build:remove -->
+    <script>
+    PiecSettings.assetsDir = 'assets/';
+    </script>
+    <!-- /build -->
+    <!-- build:remove -->
+    <script src="src/settings-overide.js"></script>
+    <!-- /build -->
+    <!-- build:js bundle.min.js -->
+    <script src="bundle.js"></script>
+    <!-- /build -->
+    <script>
+    // call out to vungle SDK
+    function doSomething(s) {
+        return actionClicked(s);
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="9" height="9" tilewidth="130" tileheight="130" nextobjectid="1">
+ <tileset firstgid="1" name="pieces" tilewidth="130" tileheight="130" tilecount="16" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="130" height="130" source="../pieces/booster01.png"/>
+  </tile>
+  <tile id="1">
+   <image width="130" height="130" source="../pieces/booster02.png"/>
+  </tile>
+  <tile id="2">
+   <image width="130" height="130" source="../pieces/piece01.png"/>
+  </tile>
+  <tile id="3">
+   <image width="130" height="130" source="../pieces/piece02.png"/>
+  </tile>
+  <tile id="4">
+   <image width="130" height="130" source="../pieces/piece03.png"/>
+  </tile>
+  <tile id="5">
+   <image width="130" height="130" source="../pieces/piece04.png"/>
+  </tile>
+  <tile id="6">
+   <image width="130" height="130" source="../pieces/piece05.png"/>
+  </tile>
+  <tile id="9">
+   <image width="130" height="130" source="../pieces/collectable01.png"/>
+  </tile>
+  <tile id="10">
+   <image width="130" height="130" source="../pieces/piece06.png"/>
+  </tile>
+  <tile id="11">
+   <image width="130" height="130" source="../pieces/piece06-paw.png"/>
+  </tile>
+  <tile id="12">
+   <image width="130" height="130" source="../pieces/piece01-paw.png"/>
+  </tile>
+  <tile id="13">
+   <image width="130" height="130" source="../pieces/piece02-paw.png"/>
+  </tile>
+  <tile id="14">
+   <image width="130" height="130" source="../pieces/piece03-paw.png"/>
+  </tile>
+  <tile id="15">
+   <image width="130" height="130" source="../pieces/piece04-paw.png"/>
+  </tile>
+  <tile id="16">
+   <image width="130" height="130" source="../pieces/piece05-paw.png"/>
+  </tile>
+  <tile id="18">
+   <image width="130" height="130" source="../pieces/fox.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="20" name="pieces" tilewidth="130" tileheight="130" tilecount="14" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="130" height="130" source="../pieces/booster01.png"/>
+  </tile>
+  <tile id="1">
+   <image width="130" height="130" source="../pieces/booster02.png"/>
+  </tile>
+  <tile id="2">
+   <image width="130" height="130" source="../pieces/piece01.png"/>
+  </tile>
+  <tile id="3">
+   <image width="130" height="130" source="../pieces/piece02.png"/>
+  </tile>
+  <tile id="4">
+   <image width="130" height="130" source="../pieces/piece03.png"/>
+  </tile>
+  <tile id="5">
+   <image width="130" height="130" source="../pieces/piece04.png"/>
+  </tile>
+  <tile id="6">
+   <image width="130" height="130" source="../pieces/piece05.png"/>
+  </tile>
+  <tile id="7">
+   <image width="130" height="130" source="../pieces/piece06.png"/>
+  </tile>
+  <tile id="8">
+   <image width="130" height="130" source="../pieces/piece01-paw.png"/>
+  </tile>
+  <tile id="9">
+   <image width="130" height="130" source="../pieces/piece02-paw.png"/>
+  </tile>
+  <tile id="10">
+   <image width="130" height="130" source="../pieces/piece03-paw.png"/>
+  </tile>
+  <tile id="11">
+   <image width="130" height="130" source="../pieces/piece04-paw.png"/>
+  </tile>
+  <tile id="12">
+   <image width="130" height="130" source="../pieces/piece05-paw.png"/>
+  </tile>
+  <tile id="13">
+   <image width="130" height="130" source="../pieces/piece06-paw.png"/>
+  </tile>
+ </tileset>
+ <layer name="bottom" width="9" height="9">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,10,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="under" width="9" height="9">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="pieces" width="9" height="9">
+  <data encoding="csv">
+0,0,5,7,4,11,6,0,0,
+0,3,4,3,6,5,7,3,0,
+3,4,7,6,7,4,5,6,11,
+4,6,3,7,13,7,11,3,7,
+11,4,7,3,6,19,6,11,0,
+4,3,6,5,23,7,12,7,7,
+3,5,3,5,4,7,6,3,7,
+0,6,4,4,15,11,3,3,0,
+0,0,11,6,6,3,6,0,0
+</data>
+ </layer>
+</map>
