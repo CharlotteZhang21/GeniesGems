@@ -390,8 +390,6 @@ class Board {
 
     getMatches(tile, u, d, l, r, matches, restrict) {
 
-        console.log('getMatches');
-
         u = typeof u === 'undefined' ? true : u;
         d = typeof d === 'undefined' ? true : d;
         l = typeof l === 'undefined' ? true : l;
@@ -871,6 +869,8 @@ class Board {
 
 
         var duration = (dist / this.flySpeed);
+
+        console.log('duration = ' + duration);
         
         if(!fox)
             duration *= 60000;
@@ -1146,7 +1146,7 @@ class Board {
 
                     extraDelay += blastMatches.length * this.staggerDelay;
 
-                    this.explodeMatches(matches, blastMatches.length > 0, tiles[i].settings, true, true, paws);
+                    this.explodeMatches(matches, blastMatches.length > 0, tiles[i].settings);
                 }
                 
             }
@@ -1159,6 +1159,7 @@ class Board {
 
         if (foundMatch === false) {
 
+            console.log('nomatches');
             this.isFinishedFalling = true;
 
             if (this.isCollecting !== true) {

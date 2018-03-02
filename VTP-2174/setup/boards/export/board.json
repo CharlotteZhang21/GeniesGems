@@ -1,7 +1,7 @@
 { "height":9,
  "layers":[
         {
-         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":9,
          "name":"bottom",
          "opacity":1,
@@ -23,7 +23,7 @@
          "y":0
         }, 
         {
-         "data":[0, 0, 5, 7, 4, 11, 6, 0, 0, 0, 3, 4, 3, 6, 5, 7, 3, 0, 3, 4, 7, 6, 7, 4, 5, 6, 11, 4, 6, 3, 7, 13, 7, 11, 3, 7, 11, 4, 7, 3, 6, 19, 6, 11, 0, 4, 3, 6, 5, 2, 7, 12, 7, 7, 3, 5, 3, 5, 6, 7, 6, 3, 7, 0, 6, 4, 4, 15, 11, 3, 3, 0, 0, 0, 11, 6, 6, 3, 6, 0, 0],
+         "data":[0, 0, 7, 7, 11, 4, 11, 0, 0, 0, 5, 11, 11, 3, 7, 5, 11, 0, 7, 7, 5, 5, 3, 6, 7, 5, 6, 3, 4, 3, 6, 12, 11, 4, 7, 4, 6, 4, 7, 3, 4, 18, 7, 4, 10, 5, 7, 4, 11, 4, 7, 11, 13, 3, 11, 4, 4, 11, 7, 3, 6, 5, 3, 0, 7, 11, 3, 17, 3, 5, 5, 0, 0, 0, 3, 4, 4, 5, 3, 0, 0],
          "height":9,
          "name":"pieces",
          "opacity":1,
@@ -75,41 +75,41 @@
                 },
              "11":
                 {
-                 "image":"..\/..\/pieces\/piece06-paw.png",
+                 "image":"..\/..\/pieces\/piece01-paw.png",
                  "imageheight":130,
                  "imagewidth":130
                 },
              "12":
                 {
-                 "image":"..\/..\/pieces\/piece01-paw.png",
+                 "image":"..\/..\/pieces\/piece02-paw.png",
                  "imageheight":130,
                  "imagewidth":130
                 },
              "13":
                 {
-                 "image":"..\/..\/pieces\/piece02-paw.png",
+                 "image":"..\/..\/pieces\/piece03-paw.png",
                  "imageheight":130,
                  "imagewidth":130
                 },
              "14":
                 {
-                 "image":"..\/..\/pieces\/piece03-paw.png",
+                 "image":"..\/..\/pieces\/piece04-paw.png",
                  "imageheight":130,
                  "imagewidth":130
                 },
              "15":
                 {
-                 "image":"..\/..\/pieces\/piece04-paw.png",
+                 "image":"..\/..\/pieces\/piece05-paw.png",
                  "imageheight":130,
                  "imagewidth":130
                 },
              "16":
                 {
-                 "image":"..\/..\/pieces\/piece05-paw.png",
+                 "image":"..\/..\/pieces\/piece06-paw.png",
                  "imageheight":130,
                  "imagewidth":130
                 },
-             "18":
+             "17":
                 {
                  "image":"..\/..\/pieces\/fox.png",
                  "imageheight":130,
@@ -148,109 +148,6 @@
              "9":
                 {
                  "image":"..\/..\/pieces\/collectable01.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                }
-            },
-         "tilewidth":130
-        }, 
-        {
-         "columns":0,
-         "firstgid":20,
-         "grid":
-            {
-             "height":1,
-             "orientation":"orthogonal",
-             "width":1
-            },
-         "margin":0,
-         "name":"pieces",
-         "spacing":0,
-         "tilecount":14,
-         "tileheight":130,
-         "tiles":
-            {
-             "0":
-                {
-                 "image":"..\/..\/pieces\/booster01.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "1":
-                {
-                 "image":"..\/..\/pieces\/booster02.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "10":
-                {
-                 "image":"..\/..\/pieces\/piece03-paw.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "11":
-                {
-                 "image":"..\/..\/pieces\/piece04-paw.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "12":
-                {
-                 "image":"..\/..\/pieces\/piece05-paw.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "13":
-                {
-                 "image":"..\/..\/pieces\/piece06-paw.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "2":
-                {
-                 "image":"..\/..\/pieces\/piece01.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "3":
-                {
-                 "image":"..\/..\/pieces\/piece02.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "4":
-                {
-                 "image":"..\/..\/pieces\/piece03.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "5":
-                {
-                 "image":"..\/..\/pieces\/piece04.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "6":
-                {
-                 "image":"..\/..\/pieces\/piece05.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "7":
-                {
-                 "image":"..\/..\/pieces\/piece06.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "8":
-                {
-                 "image":"..\/..\/pieces\/piece01-paw.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "9":
-                {
-                 "image":"..\/..\/pieces\/piece02-paw.png",
                  "imageheight":130,
                  "imagewidth":130
                 }

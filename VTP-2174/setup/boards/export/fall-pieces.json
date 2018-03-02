@@ -1,7 +1,7 @@
 { "height":14,
  "layers":[
         {
-         "data":[3, 6, 7, 4, 4, 3, 5, 10, 3, 6, 4, 3, 3, 7, 6, 4, 6, 7, 4, 3, 3, 4, 8, 3, 3, 8, 4, 8, 6, 4, 3, 6, 5, 8, 5, 12, 3, 4, 6, 6, 7, 5, 8, 3, 13, 3, 5, 8, 3, 11, 4, 7, 4, 12, 7, 3, 6, 3, 7, 8, 4, 6, 10, 7, 4, 4, 13, 5, 12, 11, 6, 6, 6, 5, 5, 4, 4, 3, 7, 3, 3, 4, 4, 3, 7, 7, 4, 5, 14, 8, 7, 7, 3, 4, 4, 5, 5, 4, 8, 3, 5, 6, 7, 6, 3, 7, 5, 3, 6, 4, 7, 4, 4, 6, 3, 5, 8, 3, 4, 3, 7, 3, 7, 3, 7, 3],
+         "data":[3, 6, 7, 4, 4, 3, 3, 5, 4, 6, 4, 3, 3, 7, 6, 4, 7, 5, 4, 3, 3, 4, 4, 3, 3, 6, 3, 4, 6, 4, 3, 6, 5, 5, 8, 7, 3, 4, 4, 6, 7, 5, 7, 4, 8, 3, 5, 5, 3, 6, 4, 3, 8, 3, 7, 3, 7, 3, 7, 5, 4, 8, 5, 7, 4, 4, 6, 5, 7, 7, 6, 6, 6, 5, 5, 4, 6, 6, 3, 3, 3, 4, 7, 3, 4, 7, 3, 6, 6, 5, 7, 7, 3, 5, 4, 7, 7, 6, 8, 3, 5, 6, 4, 5, 5, 7, 5, 8, 6, 7, 7, 4, 4, 6, 3, 5, 6, 4, 4, 5, 7, 3, 6, 4, 6, 5],
          "height":14,
          "name":"fall-pieces",
          "opacity":1,
@@ -29,8 +29,8 @@
          "margin":0,
          "name":"pieces",
          "spacing":0,
-         "tilecount":14,
-         "tileheight":130,
+         "tilecount":9,
+         "tileheight":415,
          "tiles":
             {
              "0":
@@ -42,30 +42,6 @@
              "1":
                 {
                  "image":"..\/..\/pieces\/booster02.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "10":
-                {
-                 "image":"..\/..\/pieces\/piece03-paw.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "11":
-                {
-                 "image":"..\/..\/pieces\/piece04-paw.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "12":
-                {
-                 "image":"..\/..\/pieces\/piece05-paw.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "13":
-                {
-                 "image":"..\/..\/pieces\/piece06-paw.png",
                  "imageheight":130,
                  "imagewidth":130
                 },
@@ -107,18 +83,10 @@
                 },
              "8":
                 {
-                 "image":"..\/..\/pieces\/piece01-paw.png",
-                 "imageheight":130,
-                 "imagewidth":130
-                },
-             "9":
-                {
-                 "image":"..\/..\/pieces\/piece02-paw.png",
-                 "imageheight":130,
-                 "imagewidth":130
+                 "image":"..\/..\/pieces\/piece07.png"
                 }
             },
-         "tilewidth":130
+         "tilewidth":415
         }],
  "tilewidth":130,
  "type":"map",

@@ -50,7 +50,7 @@ exports.interaction2 = {
 };
 
 exports.interaction3 = {
-    highlightTiles: [{ x: 3, y: 7 }, { x: 4, y: 7 }], // tiles to highlight
+    highlightTiles: [{ x: 6, y: 5 }, { x: 7, y: 5 }], // tiles to highlight
     arrow: { dir: 'left' }, // arrow direction
     tooltip: '{{tooltip2}}' // tooltip text
 };
@@ -91,7 +91,7 @@ exports.goalPanelAngleLandscape = 0;
 /********************* BOOSTERS (optional) *********************/
 
 exports.booster01 = {
-    name: 'rocket', // boster name
+    name: 'boster01', // boster name
     destroys: 'blast1', // choose from: horizontal, vertical, horizontalAndVertical, blast1, blast2
     delay: 300, // the delay before tiles fall
     piecesToCreate: '4-horizontal' // choose from: 4-horizontal, 4-vertical, mixture, 5-in-a-line

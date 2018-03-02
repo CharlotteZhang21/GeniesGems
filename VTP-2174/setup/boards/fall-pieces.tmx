@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="9" height="14" tilewidth="130" tileheight="130" nextobjectid="1">
- <tileset firstgid="1" name="pieces" tilewidth="130" tileheight="130" tilecount="14" columns="0">
+ <tileset firstgid="1" name="pieces" tilewidth="415" tileheight="415" tilecount="9" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="130" height="130" source="../pieces/booster01.png"/>
@@ -27,40 +27,25 @@
    <image width="130" height="130" source="../pieces/piece06.png"/>
   </tile>
   <tile id="8">
-   <image width="130" height="130" source="../pieces/piece01-paw.png"/>
-  </tile>
-  <tile id="9">
-   <image width="130" height="130" source="../pieces/piece02-paw.png"/>
-  </tile>
-  <tile id="10">
-   <image width="130" height="130" source="../pieces/piece03-paw.png"/>
-  </tile>
-  <tile id="11">
-   <image width="130" height="130" source="../pieces/piece04-paw.png"/>
-  </tile>
-  <tile id="12">
-   <image width="130" height="130" source="../pieces/piece05-paw.png"/>
-  </tile>
-  <tile id="13">
-   <image width="130" height="130" source="../pieces/piece06-paw.png"/>
+   <image source="../pieces/piece07.png"/>
   </tile>
  </tileset>
  <layer name="fall-pieces" width="9" height="14">
   <data encoding="csv">
-3,6,7,4,4,3,5,10,3,
-6,4,3,3,7,6,4,6,7,
-4,3,3,4,8,3,3,8,4,
-8,6,4,3,6,5,8,5,12,
-3,4,6,6,7,5,8,3,13,
-3,5,8,3,11,4,7,4,12,
-7,3,6,3,7,8,4,6,10,
-7,4,4,13,5,12,11,6,6,
-6,5,5,4,4,3,7,3,3,
-4,4,3,7,7,4,5,14,8,
-7,7,3,4,4,5,5,4,8,
-3,5,6,7,6,3,7,5,3,
-6,4,7,4,4,6,3,5,8,
-3,4,3,7,3,7,3,7,3
+3,6,7,4,4,3,3,5,4,
+6,4,3,3,7,6,4,7,5,
+4,3,3,4,4,3,3,6,3,
+4,6,4,3,6,5,5,8,7,
+3,4,4,6,7,5,7,4,8,
+3,5,5,3,6,4,3,8,3,
+7,3,7,3,7,5,4,8,5,
+7,4,4,6,5,7,7,6,6,
+6,5,5,4,6,6,3,3,3,
+4,7,3,4,7,3,6,6,5,
+7,7,3,5,4,7,7,6,8,
+3,5,6,4,5,5,7,5,8,
+6,7,7,4,4,6,3,5,6,
+4,4,5,7,3,6,4,6,5
 </data>
  </layer>
 </map>
