@@ -252,6 +252,19 @@ class CustomEffects {
                 case 'scaleThenFade':
                     Tweener.scaleThenFade(effect.sprite, delay, duration);
                     break;
+                case 'moveToYoyo':
+                    x = effect.sprite.x + (effect.sprite.width * x);
+                    y = effect.sprite.y + (effect.sprite.height * y);
+
+                    var tween = Tweener.moveTo(
+                        effect.sprite, x, y, delay, duration, easing);
+
+                    tween.onComplete.add(function(){
+                        var t = Tweener.moveTo(
+                            effect.sprite, effect.sprite.x, effect.sprite.y+20, delay, duration, Phaser.Easing.Quadratic.InOut);
+                        t.yoyo(true, 100).loop(true);
+                    }, this);
+                    break;
             }
         }, this);
     }

@@ -1,43 +1,43 @@
 export default {
   "frames": {
-    "00ostin.png": {
+    "jenni-1.png": {
       "frame": {
         "x": 1,
         "y": 1,
-        "w": 142,
-        "h": 221
+        "w": 269,
+        "h": 399
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 8,
-        "y": 13,
-        "w": 142,
-        "h": 221
+        "x": 0,
+        "y": 0,
+        "w": 269,
+        "h": 399
       },
       "sourceSize": {
-        "w": 160,
-        "h": 234
+        "w": 269,
+        "h": 399
       }
     },
-    "01ostin.png": {
+    "jenni-2.png": {
       "frame": {
-        "x": 145,
+        "x": 272,
         "y": 1,
-        "w": 134,
-        "h": 221
+        "w": 269,
+        "h": 399
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 9,
-        "y": 13,
-        "w": 134,
-        "h": 221
+        "x": 0,
+        "y": 0,
+        "w": 269,
+        "h": 399
       },
       "sourceSize": {
-        "w": 160,
-        "h": 234
+        "w": 269,
+        "h": 399
       }
     }
   },
@@ -47,8 +47,8 @@ export default {
     "image": "ostin.png",
     "format": "RGBA8888",
     "size": {
-      "w": 280,
-      "h": 223
+      "w": 542,
+      "h": 401
     },
     "scale": "1"
   }

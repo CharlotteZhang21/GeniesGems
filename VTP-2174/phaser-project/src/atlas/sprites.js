@@ -2,8 +2,8 @@ export default {
   "frames": {
     "arrow.png": {
       "frame": {
-        "x": 1158,
-        "y": 706,
+        "x": 961,
+        "y": 696,
         "w": 251,
         "h": 217
       },
@@ -42,8 +42,8 @@ export default {
     },
     "board.png": {
       "frame": {
-        "x": 837,
-        "y": 150,
+        "x": 768,
+        "y": 1,
         "w": 555,
         "h": 554
       },
@@ -62,8 +62,8 @@ export default {
     },
     "cta.png": {
       "frame": {
-        "x": 371,
-        "y": 906,
+        "x": 1,
+        "y": 916,
         "w": 250,
         "h": 76
       },
@@ -82,8 +82,8 @@ export default {
     },
     "goal-panel.png": {
       "frame": {
-        "x": 768,
-        "y": 1,
+        "x": 1,
+        "y": 767,
         "w": 588,
         "h": 147
       },
@@ -102,8 +102,8 @@ export default {
     },
     "hand.png": {
       "frame": {
-        "x": 966,
-        "y": 706,
+        "x": 1214,
+        "y": 789,
         "w": 190,
         "h": 227
       },
@@ -122,8 +122,8 @@ export default {
     },
     "highlight-box-2.png": {
       "frame": {
-        "x": 837,
-        "y": 706,
+        "x": 1234,
+        "y": 557,
         "w": 127,
         "h": 230
       },
@@ -142,7 +142,7 @@ export default {
     },
     "logo.png": {
       "frame": {
-        "x": 1,
+        "x": 591,
         "y": 767,
         "w": 368,
         "h": 209
@@ -160,10 +160,30 @@ export default {
         "h": 231
       }
     },
+    "star.png": {
+      "frame": {
+        "x": 253,
+        "y": 916,
+        "w": 36,
+        "h": 33
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 36,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 36,
+        "h": 33
+      }
+    },
     "tooltip.png": {
       "frame": {
-        "x": 371,
-        "y": 767,
+        "x": 768,
+        "y": 557,
         "w": 464,
         "h": 137
       },
@@ -187,8 +207,8 @@ export default {
     "image": "sprites.png",
     "format": "RGBA8888",
     "size": {
-      "w": 1410,
-      "h": 983
+      "w": 1405,
+      "h": 1017
     },
     "scale": "1"
   }

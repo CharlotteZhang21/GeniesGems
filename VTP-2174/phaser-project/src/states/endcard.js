@@ -100,7 +100,9 @@
 
               this.game.time.events.add(Settings.interactionDelay || 0, function() {
                   this.game.onInteract.dispatch();
+                  this.goal.onMove(this.game.global.interaction);
                   this.game.global.interaction++;
+
               }, this);
 
           }

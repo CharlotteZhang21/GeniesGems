@@ -108,10 +108,10 @@
     }
 
     #goal-item-1 {
-        width: 13%;
+        width: 25%;
         height: 0;
-        padding-bottom: 13%;
-        top: 50%;
+        padding-bottom: 17%;
+        top: 40%;
         left: 50%;
     }
 
@@ -155,10 +155,44 @@
         left: 80%;
     }
 
-    #ostin {
-        width: 40%;
+    // #stars{
+    //     width: 100%;
+    //     height: 0;
+    //     padding-bottom: 20%;
+    //     top: 12%;
+    //     right: 0;
+    // }
+
+    #moves {
+        width: 60%;
         height: 0;
-        padding-bottom: 60%;
+        padding-bottom: 15%;
+        top: 26%;
+        left: 40%;
+
+    }
+
+    #star1, #star2, #star3 {
+        width: 6%;
+        height: 0;
+        padding-bottom: 8%;
+        top: 38%;
+    }
+
+    #star1 {
+        left: 80.2%;
+    }
+    #star2 {
+        left: 87%;
+    }
+    #star3 {
+        left: 93.2%;
+    }
+
+    #ostin {
+        width: 60%;
+        height: 0;
+        padding-bottom: 80%;
         left: 25%;
         top: 120%;
     }
@@ -193,7 +227,7 @@
             width: 50%;
             left: 27.5%;
             height: 30%;
-            top: 25%;
+            top: 19%;
         }
 
         #board {
@@ -234,6 +268,33 @@
             left: 77.5%;
         }
 
+        #goal-item-1 {
+            top: 43%;
+        }
+
+        #moves {
+            width: 30%;
+            // padding-bottom: 15%; 
+            left: 25%;
+            top: 40%;
+        }
+
+        #star1, #star2, #star3 {
+            top: 44%;
+        }
+
+        // #star1 {
+        //     left: 80.5%;
+        // }
+
+        // #star2 {
+        //     left: 87%;
+        // }
+
+        // #star3 {
+        //     left: 93.5%;
+        // }
+
         #ostin {
             width: 25%;
             top: 140%;
@@ -245,4 +306,76 @@
             padding-bottom: 100%;
             top: 50%;
         }
+    }
+
+
+    @media all and (min-device-width: 768px) and (orientation: portrait) {
+        #ostin {
+            padding-bottom: 64%;
+        }
+
+        #tooltip {
+            top: 25%;
+        }
+
+        #goal-panel {
+            width: 70%;
+            top: 8%;
+        }
+
+        // #board, #board-mask {
+        //     width: 90vw;
+        //     height: 90vw;
+        // }
+
+        #star1, #star2, #star3 {
+            top: 40%;
+        }
+
+        #moves {
+            width: 55%;
+            // height: 55%;
+            top: 30%;
+            left: 38%;
+        }
+
+        #cta-start {;
+            padding-bottom: 25%;
+            top: 93%;
+        }
+    }
+
+    /*iPhone X portrait*/
+    @media (min-device-height: 724px) and (max-device-width: 376px) and (min-aspect-ratio: 354/724) and (orientation: portrait){
+        .cascade {
+            width: 40%;
+            height: 0;
+            padding-bottom: 130%;
+            top: 30%;
+        }
+
+        #ostin {
+            width: 70%;
+            padding-bottom: 90%;
+        } 
+    }
+
+    /*iPhone X landscape*/
+    @media (min-aspect-ratio: 724/354) and (orientation: landscape) {
+        #ostin {
+            width: 20%;
+            padding-bottom: 100%;
+        }        
+
+        #board {
+            width: 43vw;
+            height: 43vw;
+        }
+
+        #board-mask {
+            width: 43vw;
+            height: 43vw;
+        }
+
+
     }

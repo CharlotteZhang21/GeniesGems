@@ -1,6 +1,6 @@
 /* list of common tween effects */
 
-export function moveTo(sprite, x, y, delay, duration, easing, cb, autoStart) {
+export function moveTo(sprite, x, y, delay, duration, easing, cb, autoStart, yoyo) {
 
     if (sprite === null || sprite.game === null) {
         return null;
@@ -14,6 +14,10 @@ export function moveTo(sprite, x, y, delay, duration, easing, cb, autoStart) {
         easing,
         typeof autoStart === 'undefined' ? true : autoStart,
         delay);
+
+    if(yoyo) {
+        tween.yoyo = true;
+    }
 
     if (cb) {
         tween.onComplete.add(cb, this);

@@ -33,6 +33,9 @@ class Goal extends Phaser.Group {
 
         this.game.onGetGoalItem.add(this.onGetGoalItem, this);
         this.game.onGameComplete.add(this.onGameComplete, this);
+
+        this.createStars();
+        this.createMoves();
     }
 
     createItem(goal, el) {
@@ -64,10 +67,10 @@ class Goal extends Phaser.Group {
         this.add(sprite);
     }
 
-    createText(goal, el) {
+    createText(goal, el, alpha = 0) {
 
         var txt = new Phaser.Text(this.game, 0, 0, goal.amount, {
-            font: '100px mainfont',
+            font: '200px mainfont',
             fill: Settings.goalTextFill,
             stroke: Settings.goalTextStroke,
             strokeThickness: Settings.goalTextStrokeThickness,
@@ -85,6 +88,55 @@ class Goal extends Phaser.Group {
         Util.textToDom(el, txt);
 
         this.add(txt);
+
+        txt.alpha = alpha;
+    }
+
+    createStars() {
+
+        this.createItem(Settings.star1, 'star1');
+        this.createItem(Settings.star2, 'star2');
+        this.createItem(Settings.star3, 'star3');
+
+        this['star1'].alpha = 0;
+        this['star2'].alpha = 0;
+        this['star3'].alpha = 0;
+        
+    }
+
+    createMoves(el) {
+        this.createText(Settings.interactionNum, 'moves', 1);
+    }
+
+    onMove(moves){
+        // var moves = info.moves;
+        var m = this['moves'];
+        var starName = 'star' + moves;
+        var star = this[starName];
+        // console.log(moves);
+
+        var txt = parseInt(m.text);
+        txt--;
+        m.setText(txt);
+
+        this.game.add.tween(star.scale).to({
+            x: [star.scale.x * 1.5, star.scale.x],
+            y: [star.scale.x * 1.5, star.scale.x]
+        },
+        600,
+        Phaser.Easing.Back.Out,
+        true,
+        0);
+
+        this.game.add.tween(star).to({
+            alpha: 1
+        },
+        600,
+        Phaser.Easing.Back.Out,
+        true,
+        0);
+
+
     }
 
     onGetGoalItem(info) {

@@ -33,7 +33,7 @@ class Instructions extends Phaser.Group {
 
     display(interaction) {
 
-        this.board.overlay.mask = this.getMask(interaction.highlightTiles);
+        this.board.overlay.mask = this.getMask(interaction.highlightTiles, interaction.highlightOtherTiles);
 
         Util.fade(this.board.overlay, 1, 300);
 
@@ -43,8 +43,12 @@ class Instructions extends Phaser.Group {
         this.darkOverlay.show();
         this.board.showOverlay();
 
-        this.setTooltipText(Localization[interaction.tooltip.replace('{{', '').replace('}}', '')]);
+        if(interaction.tooltip != null){
+            this.setTooltipText(Localization[interaction.tooltip.replace('{{', '').replace('}}', '')]);
         this.showTooltip();
+        }
+
+        
     }
 
     hide() {
@@ -78,7 +82,7 @@ class Instructions extends Phaser.Group {
         }, this);
     }
 
-    getMask(highlightTiles) {
+    getMask(highlightTiles, highlightOtherTiles) {
 
         if (highlightTiles.length < 1 && highlightTiles.length > 2) {
             console.error('invalid amount of highlighted tiles');
@@ -114,15 +118,68 @@ class Instructions extends Phaser.Group {
                 this.board.tileWidth * (isHorizontal ? 1 : 2));
         }
 
+
         var boardW = this.board.tileWidth * this.board.boardWidth * window.devicePixelRatio;
         var boardH = this.board.tileWidth * this.board.boardHeight * window.devicePixelRatio;
+        var rectLeft, rectRight, rectTop, rectBottom, rectNTL, rectNTR, rectNBL, rectNBR;
 
-        var rectLeft = new Phaser.Rectangle(0, 0, mainRect.x, boardH);
-        var rectRight = new Phaser.Rectangle(mainRect.x + mainRect.width, 0, boardW, boardH);
-        var rectTop = new Phaser.Rectangle(mainRect.x, 0, mainRect.x + mainRect.width, mainRect.y);
-        var rectBottom = new Phaser.Rectangle(mainRect.x, mainRect.y + mainRect.height, mainRect.x + mainRect.width, boardH);
+        if (highlightOtherTiles != null) {
+            var secondRect_w = (highlightOtherTiles[0].x == highlightOtherTiles[1].x) ? 1 :  Math.abs(highlightOtherTiles[0].x - highlightOtherTiles[1].x) + 1;
+
+            var secondRect_h = (highlightOtherTiles[0].y == highlightOtherTiles[1].y) ? 1 :  Math.abs(highlightOtherTiles[0].y - highlightOtherTiles[1].y) + 1;
+        
+            var secondRect = new Phaser.Rectangle(
+                    this.board.x + Math.min(highlightOtherTiles[0].x, highlightOtherTiles[1].x) * this.board.tileWidth,
+                    this.board.y + Math.min(highlightOtherTiles[0].y, highlightOtherTiles[1].y) * this.board.tileWidth,
+                    this.board.tileWidth * secondRect_w,
+                    this.board.tileWidth * secondRect_h,
+                )
+            rectLeft = new Phaser.Rectangle(0, 0, Math.min(mainRect.x, secondRect.x), boardH);
+            rectRight = new Phaser.Rectangle( Math.max(mainRect.x + mainRect.width, secondRect.x + secondRect.width), 0, boardW, boardH);
+            rectTop = new Phaser.Rectangle( Math.min(mainRect.x, secondRect.x), 0, Math.max(mainRect.width, secondRect.width), Math.min(mainRect.y, secondRect.y));
+            rectBottom = new Phaser.Rectangle(Math.min(mainRect.x, secondRect.x), Math.max(mainRect.y + mainRect.height, secondRect.y + secondRect.height), Math.max(mainRect.width, secondRect.width), boardH - Math.max(mainRect.y + mainRect.height, secondRect.y + secondRect.height));
+            
+            /*
+            * o *                * o   o *  
+            o o o     o o o      o o   o o
+                      * o *      * o   o *
+            */
+
+            rectNTL = new Phaser.Rectangle(rectLeft.width, rectTop.height, Math.abs(mainRect.x - secondRect.x), Math.abs(mainRect.y - secondRect.y));
+            rectNTR = new Phaser.Rectangle(Math.min(mainRect.x + mainRect.width, secondRect.x + secondRect.width), rectTop.height, Math.abs(mainRect.x + mainRect.width - secondRect.x - secondRect.width), Math.abs(mainRect.y - secondRect.y));
+            rectNBL = new Phaser.Rectangle(rectBottom.x, Math.min(mainRect.y + mainRect.height, secondRect.y + secondRect.height), Math.abs(mainRect.x - secondRect.x), rectBottom.y - Math.min(mainRect.y + mainRect.height, secondRect.y + secondRect.height));
+            rectNBR = new Phaser.Rectangle(Math.min(mainRect.x + mainRect.width, secondRect.x + secondRect.width), Math.min(mainRect.y + mainRect.height, secondRect.y + secondRect.height), rectRight.x - Math.min(mainRect.x + mainRect.width, secondRect.x + secondRect.width), rectBottom.y - Math.min(mainRect.y + mainRect.height, secondRect.y + secondRect.height));
+            
+        } else {
+
+            rectLeft = new Phaser.Rectangle(0, 0, mainRect.x, boardH);
+            rectRight = new Phaser.Rectangle( mainRect.x + mainRect.width, 0, boardW, boardH);
+            rectTop = new Phaser.Rectangle( mainRect.x, 0, mainRect.width, mainRect.y);
+            rectBottom = new Phaser.Rectangle(mainRect.x, mainRect.y + mainRect.height, mainRect.width, boardH);
+        }
 
         var maskRects = [rectLeft, rectRight, rectTop, rectBottom];
+        
+        if(highlightOtherTiles != null) {
+             maskRects = [rectLeft, rectRight, rectTop, rectBottom, rectNTL, rectNTR, rectNBL, rectNBR];
+        }
+
+        // console.log("RECTM: " + mainRect);
+        // console.log("RECTS: " + secondRect);
+
+        // console.log("boardW: " + boardW + " boardH: " + boardH);
+        
+        // console.log("rectL: " + rectLeft);
+        // console.log("rectR: " + rectRight);
+
+        // console.log("rectT: " + rectTop);
+        // console.log("rectB: " + rectBottom);
+
+        // console.log("rectNTL: " + rectNTL);
+        // console.log("rectNTR: " + rectNTR);
+        // console.log("rectNBL: " + rectNBL);
+        // console.log("rectNBR: " + rectNBR);
+
 
         this.showHighlightBox(mainRect, isHorizontal);
 
@@ -132,7 +189,6 @@ class Instructions extends Phaser.Group {
         this.mask.beginFill(0xffffff);
 
         for (var i = 0; i < maskRects.length; i++) {
-
             this.mask.drawRect(
                 maskRects[i].x,
                 maskRects[i].y,
@@ -144,7 +200,6 @@ class Instructions extends Phaser.Group {
 
         return this.mask;
     }
-
     createHighlightBox() {
 
         var xOffset = this.board.tileWidth * 0.08;
@@ -330,7 +385,7 @@ class Instructions extends Phaser.Group {
     createText() {
 
         var txt = new Phaser.Text(this.game, 0, 0, '', {
-            font: '200px mainfont',
+            font: '100px mainfont',
             fill: Settings.tooltipTextFill,
             stroke: Settings.tooltipTextStroke,
             strokeThickness: Settings.tooltipTextStrokeThickness,
